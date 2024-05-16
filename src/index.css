@@ -20,5 +20,5 @@
 }
 
 body {
-  @apply bg-black text-white font-exo-regular;
+  @apply bg-base-200 text-white font-exo-regular;
 }

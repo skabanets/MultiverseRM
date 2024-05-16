@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { UseQueryResult, useQuery } from 'react-query';
 import { fetchCharacters } from '../services/api';
 import { CharacterData } from '../types/character';
+import { CharactersList } from './CharactersList/CharactersList';
 
 export const App = () => {
   const [page, setPage] = useState<number>(1);
@@ -29,8 +30,8 @@ export const App = () => {
   return (
     <>
       <Header />
-      <main>
-        <ul></ul>
+      <main className="container py-12 flex justify-center">
+        <CharactersList characters={data.characters} />
       </main>
       <button onClick={() => setPage(prevPage => prevPage + 1)}>Next page</button>
     </>

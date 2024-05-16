@@ -16,6 +16,7 @@ export default {
     },
   },
   plugins: [
+    require('daisyui'),
     ({ addComponents }) => {
       addComponents({
         '.container': {

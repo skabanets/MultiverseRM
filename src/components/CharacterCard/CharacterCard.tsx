@@ -5,7 +5,7 @@ interface CharacterCardPops {
 }
 export const CharacterCard = ({ character }: CharacterCardPops) => {
   return (
-    <div className="card bg-[#66ff00] text-black shadow-xl w-fit cursor-pointer">
+    <div className="card bg-teal-400 text-base-200 shadow-lg w-fit cursor-pointer hover:shadow-[#66ff00] hover:bg-[#66ff00] hover:scale-105">
       <figure>
         <img src={character.image} alt={character.name} />
       </figure>

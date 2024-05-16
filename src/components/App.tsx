@@ -5,9 +5,12 @@ import { fetchCharacters } from '../services/api';
 import { CharacterData } from '../types/character';
 import { CharactersList } from './CharactersList/CharactersList';
 import { Loader } from './Loader/Loader';
+import { useModal } from '../hooks/useModal';
+import { Modal } from './Modal/Modal';
 
 export const App = () => {
   const [page, setPage] = useState<number>(1);
+  const [isModal, toggleIsModal] = useModal();
 
   const { data, isLoading }: UseQueryResult<CharacterData, unknown> = useQuery(
     ['characters', page],
@@ -32,8 +35,13 @@ export const App = () => {
     <>
       <Header />
       <main className="container py-12 flex justify-center">
-        <CharactersList characters={data.characters} />
+        <CharactersList characters={data.characters} toggleIsModal={toggleIsModal} />
       </main>
+      {isModal && (
+        <Modal toggleModal={toggleIsModal}>
+          <h2>Modal</h2>
+        </Modal>
+      )}
       <button onClick={() => setPage(prevPage => prevPage + 1)} className="text-black">
         Next page
       </button>

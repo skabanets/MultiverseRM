@@ -21,7 +21,7 @@ export const PaginationBar = ({ page, count, handleChangePage }: PaginationBarPr
         size="large"
         sx={{
           '& .MuiPaginationItem-root': { fontSize: '1.5rem' },
-          '& .Mui-selected': { backgroundColor: '#38B2AC', color: 'white' },
+          '& .Mui-selected': { backgroundColor: '#2cd4bf !important', color: 'black' },
           '& .MuiPaginationItem-root:hover': { backgroundColor: '#66ff00', color: 'black' },
         }}
       />

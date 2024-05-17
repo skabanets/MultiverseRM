@@ -1,10 +1,13 @@
 import { useEffect } from 'react';
 import { IoCloseOutline } from 'react-icons/io5';
+import ReactDOM from 'react-dom';
 
 interface ModalProps {
   children: React.ReactNode;
   toggleModal: () => void;
 }
+
+const modalRoot = document.querySelector('#modalRoot')!;
 
 export const Modal = ({ children, toggleModal }: ModalProps) => {
   useEffect(() => {
@@ -29,7 +32,7 @@ export const Modal = ({ children, toggleModal }: ModalProps) => {
     }
   };
 
-  return (
+  return ReactDOM.createPortal(
     <div
       className="flex items-center justify-center fixed bg-black backdrop-blur-sm bg-opacity-40 w-screen h-screen left-0 top-0 z-50"
       onClick={handleClickOnBackdrop}
@@ -40,6 +43,7 @@ export const Modal = ({ children, toggleModal }: ModalProps) => {
         </button>
         {children}
       </div>
-    </div>
+    </div>,
+    modalRoot
   );
 };

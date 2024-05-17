@@ -21,6 +21,8 @@ export const App = () => {
     }
   );
 
+  console.log(isLoading, 'Loading');
+
   if (isLoading) {
     return <Loader />;
   }

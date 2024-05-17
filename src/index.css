@@ -22,3 +22,7 @@
 body {
   @apply bg-white text-white font-exo-regular min-h-screen;
 }
+
+.imageWrapper {
+  border-radius: 12px 0 0 12px;
+}

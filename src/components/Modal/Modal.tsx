@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { IoCloseOutline } from 'react-icons/io5';
 import ReactDOM from 'react-dom';
+import { useEffect } from 'react';
+import { IoMdCloseCircleOutline } from 'react-icons/io';
 
 interface ModalProps {
   children: React.ReactNode;
@@ -37,9 +37,9 @@ export const Modal = ({ children, toggleModal }: ModalProps) => {
       className="flex items-center justify-center fixed bg-black backdrop-blur-sm bg-opacity-40 w-screen h-screen left-0 top-0 z-50"
       onClick={handleClickOnBackdrop}
     >
-      <div className="relative rounded-lg p-10 bg-teal-400">
-        <button type="button" onClick={toggleModal} className="absolute top-1 right-2 w-3 h-3">
-          <IoCloseOutline className="stroke-base-200" />
+      <div className="relative rounded-xl bg-teal-400">
+        <button type="button" onClick={toggleModal} className="absolute top-2.5 right-2.5">
+          <IoMdCloseCircleOutline className="fill-red-500 size-6 hover:fill-red-800" />
         </button>
         {children}
       </div>

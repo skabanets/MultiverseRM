@@ -13,7 +13,7 @@ export const PaginationBar = ({ page, count, handleChangePage }: PaginationBarPr
   };
 
   return (
-    <Stack spacing={2} className="text-black mt-10">
+    <Stack spacing={2} className="text-black">
       <Pagination
         count={count}
         page={page}

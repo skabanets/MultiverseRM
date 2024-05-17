@@ -34,7 +34,7 @@ export const Modal = ({ children, toggleModal }: ModalProps) => {
 
   return ReactDOM.createPortal(
     <div
-      className="flex items-center justify-center fixed bg-black backdrop-blur-sm bg-opacity-40 w-screen h-screen left-0 top-0 z-50"
+      className="flex items-center justify-center fixed bg-black backdrop-blur-md bg-opacity-40 w-screen h-screen left-0 top-0 z-50"
       onClick={handleClickOnBackdrop}
     >
       <div className="relative rounded-xl bg-teal-400">

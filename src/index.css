@@ -26,3 +26,7 @@ body {
 .imageWrapper {
   border-radius: 12px 0 0 12px;
 }
+
+.input-field {
+  @apply bg-white text-sm px-[12px] py-[6px] border  border-solid rounded-xl focus:outline-none hover:border-[#66ff00];
+}

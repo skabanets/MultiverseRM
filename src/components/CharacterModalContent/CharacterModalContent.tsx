@@ -1,5 +1,5 @@
+import { getStatusColor } from '../../helpers/getStatusColor';
 import { Character } from '../../types/character';
-import { getStatusColor } from '../helpers/getStatusColor';
 
 interface CharacterModalContentPops {
   character: Character;

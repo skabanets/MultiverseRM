@@ -23,3 +23,9 @@ export interface Character {
   type: string;
   url: string;
 }
+
+export interface SearchParams {
+  name: string;
+  gender: 'Female' | 'Male' | 'Genderless' | 'unknown';
+  status: 'Alive' | 'Dead' | 'unknown';
+}

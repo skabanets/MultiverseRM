@@ -49,8 +49,10 @@ export const App = () => {
     return <h2>there is no data</h2>;
   }
 
-  const handleChangePage = (page: number): void => {
-    setPage(page);
+  const handleChangePage = (newPage: number): void => {
+    if (page === newPage) return;
+
+    setPage(newPage);
     scrollUp();
   };
 

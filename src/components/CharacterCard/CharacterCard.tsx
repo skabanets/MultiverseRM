@@ -14,7 +14,7 @@ export const CharacterCard = ({ character }: CharacterCardPops) => {
     <>
       <div
         onClick={toggleIsModal}
-        className="h-[340px] card bg-teal-400 text-base-200 shadow-lg cursor-pointer hover:shadow-[#66ff00] hover:bg-[#66ff00] hover:scale-105"
+        className="h-[340px] card bg-teal-400 text-base-200 shadow-lg cursor-pointer hover:shadow-[#66ff00] hover:bg-[#66ff00] hover:scale-105 ease-out"
       >
         <figure>
           <img src={character.image} alt={character.name} width={280} height={280} />

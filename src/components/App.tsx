@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { UseQueryResult, useQuery } from 'react-query';
 
 import { Filter } from './Filter/Filter';
@@ -24,6 +24,23 @@ export const App = () => {
     }
   );
 
+  useEffect(() => {
+    const handleScroll = () => window.scrollY || document.documentElement.scrollTop;
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   if (isLoading) {
     return <Loader />;
   }
@@ -34,6 +51,7 @@ export const App = () => {
 
   const handleChangePage = (page: number): void => {
     setPage(page);
+    scrollUp();
   };
 
   const handleChangeSearchParams = (data: string): void => {

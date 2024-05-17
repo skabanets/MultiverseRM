@@ -1,6 +1,4 @@
-# MultiverseRM - application for events registration
-
-Rick and Morty Multiverse Characters
+# MultiverseRM - Rick and Morty Multiverse Characters
 
 ## Introduction
 

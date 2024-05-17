@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { IoClose } from 'react-icons/io5';
+import { GrPowerReset } from 'react-icons/gr';
 
 import { SearchParams } from '../../types/character';
 import { createQueryString } from '../../helpers/createQueryString';
@@ -9,10 +10,14 @@ interface FilterPops {
 }
 
 export const Filter = ({ setParams }: FilterPops) => {
-  const { register, handleSubmit, setValue } = useForm<SearchParams>();
+  const { register, handleSubmit, setValue, reset } = useForm<SearchParams>();
 
   const onSubmit = (data: SearchParams): void => {
     setParams(createQueryString(data));
+  };
+
+  const resetForm = (): void => {
+    reset();
   };
 
   return (
@@ -51,7 +56,13 @@ export const Filter = ({ setParams }: FilterPops) => {
           <option value="unknown">Unknown"</option>
         </select>
       </label>
-      <button className="btn btn-wide bg-teal-300 ml-auto text-lg text-gray-500 border-none h-6 rounded-xl shadow-md hover:bg-teal-400">
+      <button
+        onClick={resetForm}
+        className="border border-solid p-1 rounded-xl bg-teal-300 hover:bg-teal-400 shadow-sm border-gray-300"
+      >
+        <GrPowerReset />
+      </button>
+      <button className="btn btn-wide bg-teal-300 ml-auto text-lg text-gray-500 h-6 rounded-xl shadow-sm hover:bg-teal-400 border border-solid border-gray-300">
         Search
       </button>
     </form>

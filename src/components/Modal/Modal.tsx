@@ -39,7 +39,7 @@ export const Modal = ({ children, toggleModal }: ModalProps) => {
     >
       <div className="relative rounded-xl bg-teal-400">
         <button type="button" onClick={toggleModal} className="absolute top-2.5 right-2.5">
-          <IoMdCloseCircleOutline className="fill-red-500 size-6 hover:fill-red-800" />
+          <IoMdCloseCircleOutline className="fill-red-500 size-6 hover:fill-red-600" />
         </button>
         {children}
       </div>

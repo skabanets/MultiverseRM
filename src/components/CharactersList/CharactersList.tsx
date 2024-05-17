@@ -1,4 +1,5 @@
 import { CharacterCard } from '../CharacterCard/CharacterCard';
+
 import { Character } from '../../types/character';
 
 interface CharactersListProps {

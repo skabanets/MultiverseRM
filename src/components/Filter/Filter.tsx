@@ -29,7 +29,7 @@ export const Filter = ({ setParams }: FilterPops) => {
         <input
           type="text"
           className="input-field focus:border-[#66ff00]"
-          placeholder="search by name"
+          placeholder="Search by name"
           {...register('name')}
         />
         <IoClose
@@ -62,7 +62,7 @@ export const Filter = ({ setParams }: FilterPops) => {
       >
         <GrPowerReset />
       </button>
-      <button className="btn btn-wide bg-teal-300 ml-auto text-lg text-gray-500 h-6 rounded-xl shadow-sm hover:bg-teal-400 border border-solid border-gray-300">
+      <button className="btn-wide h-12 bg-teal-300 ml-auto text-lg text-gray-500 rounded-xl shadow-sm border border-solid border-gray-300 hover:bg-teal-400 ">
         Search
       </button>
     </form>

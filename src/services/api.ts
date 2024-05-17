@@ -11,12 +11,12 @@ export const fetchCharacters = async (
     );
 
     const {
-      info: { pages },
+      info: { pages, count },
       results: characters,
     } = data;
 
-    return { pages, characters };
+    return { pages, count, characters };
   } catch (error) {
-    return { pages: 0, characters: [] };
+    return { pages: 0, count: 0, characters: [] };
   }
 };

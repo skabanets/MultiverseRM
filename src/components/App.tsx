@@ -65,7 +65,13 @@ export const App = () => {
       <main className="container py-10 flex flex-col justify-center items-center gap-10">
         <Filter setParams={handleChangeSearchParams} />
         {data.characters.length !== 0 ? (
-          <CharactersList characters={data.characters} />
+          <div>
+            <div className="text-gray-500 text-lg mb-5 flex flex-col md:flex-row md:justify-between">
+              <h2>Total characters: {data.count}</h2>
+              {data.count > 20 && <h2>Current page: {page}</h2>}
+            </div>
+            <CharactersList characters={data.characters} />
+          </div>
         ) : (
           <Notification />
         )}

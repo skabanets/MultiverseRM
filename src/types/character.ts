@@ -1,5 +1,6 @@
 export interface CharacterData {
   pages: number;
+  count: number;
   characters: Character[];
 }
 

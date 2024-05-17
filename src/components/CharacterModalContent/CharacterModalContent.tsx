@@ -7,7 +7,7 @@ interface CharacterModalContentPops {
 
 export const CharacterModalContent = ({ character }: CharacterModalContentPops) => {
   return (
-    <div className="flex flex-col w-[300px] md:flex-row md:w-[600px] text-base-100 text-lg">
+    <div className="flex flex-col w-[300px] md:flex-row md:w-[600px] text-base-100 text-lg min-h-[300px]">
       <div className="overflow-hidden imageWrapper">
         <img src={character.image} alt={character.name} width={300} />
       </div>

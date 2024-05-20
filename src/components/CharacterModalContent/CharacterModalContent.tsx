@@ -11,7 +11,7 @@ export const CharacterModalContent = ({ character }: CharacterModalContentPops) 
       <div className="overflow-hidden imageWrapper">
         <img src={character.image} alt={character.name} width={300} />
       </div>
-      <div className="flex flex-col gap-3 md:gap-4 p-5 justify-center mx-auto">
+      <div className="flex flex-col justify-center gap-3 md:gap-4 p-5 mx-auto max-w-[300px]">
         <h2 className="text-2xl font-exo-bold">{character.name}</h2>
         <div>
           <p>
